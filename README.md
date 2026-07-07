@@ -1,4 +1,4 @@
-# Voly Laptop Provisioning Toolkit ( W.I.P )
+# Voly Laptop Provisioning Toolkit
 
 > Work in progress
 > This toolkit is currently being built and tested. It is not ready for production use yet.
