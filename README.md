@@ -86,7 +86,7 @@ The toolkit has two main stages.
 Run this from a domain-connected admin workstation or server.
 
 ```powershell
-.\Build-OfflineJoinBlob.ps1 -CompanyKey Sumo -DeviceType Laptop
+.\Build-OfflineJoinBlob.ps1 -CompanyKey -DeviceType Laptop
 ```
 
 This creates an Offline Domain Join package for the next available computer name.
@@ -134,8 +134,8 @@ Example settings:
 
 ```json
 {
-  "DomainDns": "sumopower.local",
-  "DefaultOu": "OU=Laptops,OU=Computers,DC=sumopower,DC=local",
+  "DomainDns": "company.local",
+  "DefaultOu": "OU=Laptops,OU=Computers,DC=company,DC=local",
   "Pattern": "SA-LT-{0000}"
 }
 ```
@@ -202,7 +202,7 @@ Example local installer:
 ```json
 {
   "Name": "Example App",
-  "CompanyKeys": ["Sumo"],
+  "CompanyKeys": ["company"],
   "InstallMethod": "exe",
   "Source": "\\\\server\\share\\Installers\\ExampleApp.exe",
   "Arguments": "/S",
@@ -246,7 +246,7 @@ The toolkit applies bookmarks as managed Edge and Chrome policies.
 Example app-only test run:
 
 ```powershell
-.\Start-LaptopBuild.ps1 -CompanyKey Sumo -SkipDomainJoin -NoRestart
+.\Start-LaptopBuild.ps1 -CompanyKey company -SkipDomainJoin -NoRestart
 ```
 
 ## Reports
@@ -271,7 +271,7 @@ New starter laptop setup completed.
 
 Device name: SA-LT-0086
 Serial number: ABC123456
-Company: Sumo Energy
+Company: company
 Domain joined before reboot: False
 Restart required: True
 
