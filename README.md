@@ -2,6 +2,7 @@
 
 > Work in progress
 > This toolkit is currently being built and tested. It is not ready for production use yet.
+> This is currently an idea and planned works are on the way!
 
 A small Windows laptop provisioning toolkit for repeatable new starter device setup.
 
